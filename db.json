@@ -4,25 +4,39 @@
     "description": "Descubra se você está num nível Jedi ou ainda é um Padawan",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
+        "image": "https://cdn.ome.lt/s80FqJlBcFf_UJJ9rJjOjXgcpc8=/fit-in/837x500/smart/uploads/conteudo/fotos/estrela-da-morte-4_wtzgWiv.gif",
+        "title": "Qual foi o primeiro planeta destruído pela Estrela da Morte?",
+        "description": "Faz tempo em haha",
         "answer": 2,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Dantooine",
+          "Tatooine",
+          "Alderaan",
+          "Bespin"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
-        "answer": 0,
+        "image": "https://lh3.googleusercontent.com/proxy/rhkJZF537bJRdzBuW3DdRvGDA8ADG9LN5BT3I6mahWqpVlr6jIyXBIwzZZyrHO6nZ8hyjshS_rZU0WG_6r3quX3VrD8xaUDeffhSPnMGNQ0iiYr7kT2QtpaTTnUbRZ2KKKwflH0HTiG7mLe88pR-",
+        "title": "Qual Stormtrooper não consegue cumprir sua missão no episódio VII?",
+        "description": "",
+        "answer": 1,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+           "FN-2705",
+           "FN-2187",
+           "FN-1312",
+           "FN-1205"
+        ]
+      },
+      {
+        "image": "https://kanto.legiaodosherois.com.br/w750-h450-k1/wp-content/uploads/2020/04/legiao_l_HVjGeA4o7I.png.jpeg",
+        "title": "O primeiro filme da saga foi lançado em qual ano?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+          "o filme é de 1976, se liga!",
+          "o filme é de 1977, se liga!",
+           "o filme é de 1978, se liga!",
+           "o filme é de 1979, se liga!"
         ]
       }
     ],

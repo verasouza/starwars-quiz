@@ -10,29 +10,12 @@ import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizLogo from '../src/components/QuizLogo';
 import {Button} from '../src/components/Button';
+import Input from '../src/components/Input';
+import QuizContainer from '../src/components/QuizContainer';
 
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-
-  
-`
-
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  @media screen and (max-width: 500px) {
-  margin: auto;
-  padding: 15px;
-  }
-  `;
 
  
  
@@ -57,9 +40,6 @@ function handleSubmit (e) {
 
   return (
     <QuizBackground backgroundImage={db.bg}>
-      <Head>
-        <title>Star Wars Quiz</title>
-      </Head>
       <QuizContainer>
         <QuizLogo />
         <Widget>
@@ -70,7 +50,8 @@ function handleSubmit (e) {
           <p>{db.description}</p>
           <ToastContainer autoClose={3000} />
           <form>
-            <input 
+            <Input 
+            name="name"
             value={name}
             onChange={e => setName(e.target.value)}
             placeholder="Digite seu nome" />
