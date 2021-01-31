@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Widget} from '../Widget';
 import {Button} from '../Button';
 import AlternativesForm from '../AlternativesForm';
+import BackLinkArrow from '../BackLinkArrow';
 
 export default function QuestionWidget(props){
 const question = props.question;
@@ -17,6 +18,7 @@ const hasAlternativeSelected = selectedAlternative !== undefined;
   return (
     <Widget>
       <Widget.Header>
+      <BackLinkArrow href="/" />
        <h3>
           {`Pergunta ${props.questionIndex + 1} de ${props.totalQuestions}`}
         </h3>

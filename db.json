@@ -87,7 +87,7 @@
     "theme": {
       "colors": {
         "primary": "#b28704",
-        "secondary": "#ffc107",
+        "secondary": "#f2d400",
         "mainBg": "rgb(28, 24, 20, 0.2)",
         "contrastText": "#FFFFFF",
         "wrong": "#FF5722",
