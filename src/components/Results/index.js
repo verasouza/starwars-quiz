@@ -4,7 +4,8 @@ import {Button} from '../Button';
 import {useRouter} from 'next/router';
 
 export default function ResultWidget (props){
-    const router = useRouter();
+	const router = useRouter();
+	const results = props.results.filter((x) => x).length;
 
 
     function backToHome(e) {
@@ -16,7 +17,7 @@ export default function ResultWidget (props){
     return(
 			<Widget>
 				<Widget.Header>
-					Seus resultados
+					<h3>Seus resultados</h3>
 			</Widget.Header>
 				<Widget.Content>
 					<p>
@@ -26,20 +27,28 @@ export default function ResultWidget (props){
           {' '}
           perguntas
         </p>
-					<ul>
-						{props.results.map((result, index) => (
-							<li key={`result__${result}`}>
-								#
-								{index + 1}
-								{' '}
-              Resultado:
-								{result === true
-									? 'Acertou'
-									: 'Errou'}
-							</li>
-						))}
-					</ul>
-
+{results <= 3 ? 
+      <img src={props.bgFailed}
+	  alt="descrição"
+	  style={{
+		width: '100%',
+		height: '100%',
+		objectFit: 'cover'
+	  }}
+	/>
+	:
+	<>
+	<p>Tio Vader está orgulhoso</p>
+	<img src={props.bgSucess}
+	alt="descrição"
+	style={{
+	  width: '100%',
+	  height: '100%',
+	  objectFit: 'cover'
+	}}
+  />
+  </>
+}
 					<Button type="submit" onClick={(e) => backToHome(e)}>Jogar novamente</Button>
 
 				</Widget.Content>

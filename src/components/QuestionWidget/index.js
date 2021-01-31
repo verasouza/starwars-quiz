@@ -17,7 +17,9 @@ const hasAlternativeSelected = selectedAlternative !== undefined;
   return (
     <Widget>
       <Widget.Header>
-        <h3>Pergunta {props.questionIndex + 1} de {props.totalQuestions}</h3>
+       <h3>
+          {`Pergunta ${props.questionIndex + 1} de ${props.totalQuestions}`}
+        </h3>
       </Widget.Header>
       <img src={question.image}
         alt="descrição"
@@ -63,6 +65,7 @@ const hasAlternativeSelected = selectedAlternative !== undefined;
               name={questionId}
               id={alternativeId}
               onChange={() => setSelectedAlternative(index)}
+              checked={isSelected}
             />
           {alternativa}
           </Widget.Topic>

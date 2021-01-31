@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 import {useRouter} from 'next/router';
+import {motion} from 'framer-motion';
 
 import db from '../db.json';
 import {Widget} from '../src/components/Widget';
@@ -12,6 +13,7 @@ import QuizLogo from '../src/components/QuizLogo';
 import {Button} from '../src/components/Button';
 import Input from '../src/components/Input';
 import QuizContainer from '../src/components/QuizContainer';
+import Link from '../src/components/Link';
 
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -37,12 +39,29 @@ function handleSubmit (e) {
   
 }
 
+function handleOtherQuizes(e){
+  e.preventDefault();
+  if(name.length === 0){
+    return notify();
+  }
+  router.push(`/quiz/${projectName}__${projectCreator}`)
+}
+
 
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
         <QuizLogo />
-        <Widget>
+        <Widget 
+        as={motion.section}
+        transition={{delay: 0.0, duration:0.5}}
+        variants={{
+            show:{opacity: 1, y:'0', scale: 1},
+            hidden:{opacity: 0, y:'100%'}
+          }}
+          initial='hidden'
+          animate="show"
+        >
         <Widget.Header>
         <h1>{db.title}</h1>
           </Widget.Header>
@@ -60,16 +79,50 @@ function handleSubmit (e) {
           </Widget.Content>
           
         </Widget>
-        <Widget>
+        <Widget 
+        as={motion.section}
+        transition={{delay: 0.3, duration:0.5}}
+        variants={{
+            show:{opacity: 1, y:'0', scale: 1},
+            hidden:{opacity: 0, y:'100%'}
+          }}
+          initial='hidden'
+          animate="show"
+          >
         <Widget.Header>
-        <h1>Quizes da galera</h1>
+        <h1>Ou escolha um dos quizes baixo</h1>
         </Widget.Header>
         <Widget.Content>
-          
-          <p>Mussum Ipsum, cacilds vidis litro abertis. Diuretics paradis num copo é motivis de denguis</p>
+       <ul>
+       {db.external.map((link, index) =>{
+         const [projectName, projectCreator] = link.replace(/\//g, '')
+         .replace('https:', '')
+         .replace('.vercel.app', '')
+         .split('.');
+          return(
+            <li key={index}>
+            <Widget.Topic 
+            as={Link}
+            href={`/quiz/${projectName}__${projectCreator}`}
+           
+            >
+              {projectName} criado por {projectCreator}
+              </Widget.Topic>
+          </li>
+          )         
+        })}
+       </ul>
           </Widget.Content>
         </Widget>
-        <Footer />
+        <Footer 
+        as={motion.section}
+        transition={{delay: 0.6, duration:0.5}}
+        variants={{
+            show:{opacity: 1, y:'0', scale: 1},
+            hidden:{opacity: 0, y:'100%'}
+          }}
+          initial='hidden'
+          animate="show" />
       </QuizContainer>
      <GitHubCorner projectUrl="https://github.com/verasouza/"/>
     </QuizBackground>

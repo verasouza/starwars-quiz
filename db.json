@@ -1,7 +1,9 @@
 {
     "bg": "https://poltronanerd.com.br/wp-content/uploads/2020/12/logo-star-wars.jpg",
+    "bgFailed": "https://i.redd.it/0s6b4rrcs8a21.jpg",
+    "bgSucess":"https://media0.giphy.com/media/l1KuhBCqxOoJyr0m4/giphy.gif",
     "title": "Você manja de Star Wars?",
-    "description": "Descubra se você está num nível Jedi ou ainda é um Padawan",
+    "description": "Teste seus conhecimentos sobre uma galaxia distante...",
     "questions": [
       {
         "image": "https://cdn.ome.lt/s80FqJlBcFf_UJJ9rJjOjXgcpc8=/fit-in/837x500/smart/uploads/conteudo/fotos/estrela-da-morte-4_wtzgWiv.gif",
@@ -16,7 +18,7 @@
         ]
       },
       {
-        "image": "https://lh3.googleusercontent.com/proxy/rhkJZF537bJRdzBuW3DdRvGDA8ADG9LN5BT3I6mahWqpVlr6jIyXBIwzZZyrHO6nZ8hyjshS_rZU0WG_6r3quX3VrD8xaUDeffhSPnMGNQ0iiYr7kT2QtpaTTnUbRZ2KKKwflH0HTiG7mLe88pR-",
+        "image": "https://cutt.ly/Hkt2g15",
         "title": "Qual Stormtrooper não consegue cumprir sua missão no episódio VII?",
         "description": "",
         "answer": 1,
@@ -38,10 +40,49 @@
            "o filme é de 1978, se liga!",
            "o filme é de 1979, se liga!"
         ]
+      },
+      {
+        "image": "https://starwarsblog.starwars.com/wp-content/uploads/2019/08/luke-rogue-group.jpg",
+        "title": "Qual era a identificação da nave de Luke durante o ataque a Estrela da Morte?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+          "Vermelho 11",
+          "Azul 8",
+           "Vermelho 5",
+           "Azul 7"
+        ]
+      },
+      {
+        "image": "https://cutt.ly/ykt8SLs",
+        "title": "Qual o planeta natal de Han Solo?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+          "Bespin",
+          "Corellia",
+           "Ryloth",
+           "Tatooine"
+        ]
+      },
+      {
+        "image": "https://cutt.ly/9kt85mb",
+        "title": "Onde começaram as guerras Clônicas?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+          "Naboo",
+          "Geonosis",
+           "Coruscant",
+           "Tatooine"
+        ]
       }
     ],
     "external": [
-      ""
+      "https://naruto-quiz.llofyy.vercel.app/",
+      "https://quiz-justiceleague.levi-magny.vercel.app/",
+      "https://quiz-star-wars-git-main.mattheussal.vercel.app/",
+      "https://supertechquiz.vercel.app/"
     ],
     "theme": {
       "colors": {

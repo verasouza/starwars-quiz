@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, {keyframes} from 'styled-components';
 import {Widget} from '../Widget';
+import Lottie from 'react-lottie';
+import bb8 from '../../../public/3010-bb8';
 
 const spin = keyframes`
     0% { 
@@ -23,15 +25,28 @@ j
 
 `;
 
+const defaulOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: bb8,
+    rendererSettings:{
+        preserveAspectioRatio:"xMidYMid slice"
+    }
 
-export default function LoadingWidget(){
+}
+
+export default function LoadingWidget({name}){
     return(
         <Widget>
             <Widget.Header>
-               <h2> Aguarde padawan...</h2>
+               <h2> Aguarde padawan {name}...</h2>
         </Widget.Header>
             <Widget.Content>
-                <Loader />
+                <Lottie 
+                options={defaulOptions}
+                height={200}
+                width={200}
+                />
             </Widget.Content>
         </Widget>
     );
